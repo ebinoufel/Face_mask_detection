@@ -6,12 +6,15 @@ app = Flask(__name__)
 app_root = os.path.abspath(os.path.dirname(__file__))
 app.secret_key = os.urandom(25)
 
-@app.route('/',methods=['GET'])
+@app.route('/',methods=['GET','POST'])
 
 def index():
 
-    return render_template("test.html",message= "hey potato")
-    #return 'pott'
+    return render_template("test.html")
+   
+    f = request.files['file']
+    print(f)
+    print('asdfghj')
 
 if __name__ == '__main__':
     app.run(debug=True)
