@@ -1,0 +1,1 @@
+!python train.py --img 415 --batch 16 --epochs 30 --data 'C:/Users/EBIN/OneDrive/Documents/GitHub/Face_mask_detection/dataset.yaml' --cfg 'models/yolov5s.yaml' --cache
